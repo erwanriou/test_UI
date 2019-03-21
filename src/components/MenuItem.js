@@ -1,6 +1,15 @@
 import React from "react"
 
 class MenuItem extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      grill: {
+        height: 20,
+        width: 30
+      }
+    }
+  }
   render() {
     const { menu } = this.props
     return (
@@ -8,7 +17,7 @@ class MenuItem extends React.Component {
         <h1>{menu.menu}</h1>
         <ul>
           {menu.items.map(item => (
-            <li key={item.$id}>{item.Name}</li>
+            <li key={item.$id}>{new Array(item.Quantity).fill(item.Name)}</li>
           ))}
         </ul>
       </div>

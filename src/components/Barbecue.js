@@ -1,11 +1,13 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
+import { Switch, Route, withRouter } from "react-router-dom"
 
 // IMPORT ACTIONS
 import { fetchMenus } from "../actions/menuActions"
 
 // IMPORT COMPONENTS
-import MenuList from "./MenuList"
+import MenuSelector from "./MenuSelector"
+import MenuItem from "./MenuItem"
 
 class Barbecue extends Component {
   componentDidMount() {
@@ -14,7 +16,17 @@ class Barbecue extends Component {
   render() {
     return (
       <div className="Barbecue">
-        <MenuList {...this.props} />
+        <MenuSelector {...this.props} />
+        <Switch>
+          {this.props.menus.menus.map(menu => (
+            <Route
+              exact
+              path={`/menu/${menu.Id}`}
+              key={menu.$id}
+              render={() => <MenuItem menu={menu} />}
+            />
+          ))}
+        </Switch>
       </div>
     )
   }
@@ -24,7 +36,9 @@ const mapStateToProps = state => ({
   menus: state.menus
 })
 
-export default connect(
-  mapStateToProps,
-  { fetchMenus }
-)(Barbecue)
+export default withRouter(
+  connect(
+    mapStateToProps,
+    { fetchMenus }
+  )(Barbecue)
+)
