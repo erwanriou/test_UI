@@ -1,6 +1,22 @@
 import axios from "axios"
-import { FETCH_MENUS, GET_ERRORS } from "../types"
-import { loading, clearLoading } from "../global/loadingActions"
+import {
+  FETCH_MENUS,
+  GET_ERRORS,
+  LOADING_DATA,
+  CLEAR_LOADING_DATA
+} from "../types"
+
+const loading = () => {
+  return {
+    type: LOADING_DATA
+  }
+}
+
+const clearLoading = () => {
+  return {
+    type: CLEAR_LOADING_DATA
+  }
+}
 
 export const fetchMenus = () => async dispatch => {
   dispatch(loading())
