@@ -9,6 +9,9 @@ import { fetchMenus } from "../actions/menuActions"
 import MenuSelector from "./MenuSelector"
 import MenuItem from "./MenuItem"
 
+// IMPORT CSS
+import "../styles/global.css"
+
 class Barbecue extends Component {
   componentDidMount() {
     this.props.fetchMenus()

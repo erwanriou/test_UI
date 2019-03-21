@@ -1,0 +1,8 @@
+.grill {
+  position: relative;
+  right: -1rem;
+}
+canvas {
+  position: absolute;
+  border: 1px solid #ccc;
+}
