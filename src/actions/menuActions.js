@@ -4,7 +4,7 @@ import {
   GET_ERRORS,
   LOADING_DATA,
   CLEAR_LOADING_DATA
-} from "../types"
+} from "./types"
 
 const loading = () => {
   return {

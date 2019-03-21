@@ -1,4 +1,6 @@
 export const FETCH_MENUS = "FETCH_MENUS"
 export const GET_ERRORS = "GET_ERRORS"
+export const CLEAR_ERRORS = "CLEAR_ERRORS"
 export const LOADING_DATA = "LOADING_DATA"
 export const CLEAR_LOADING_DATA = "CLEAR_LOADING_DATA"
+export const RESET_STATE = "RESET_STATE"
