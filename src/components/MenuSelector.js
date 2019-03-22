@@ -24,6 +24,7 @@ class MenuSelector extends React.Component {
           onChange={this.handleSelectMenu}
           value={this.state.menu}
         >
+          <option defaultValue="">Pick a menu</option>
           {menus.map(menu => (
             <option key={menu.Id} value={menu.Id}>
               {menu.menu}

@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bin-pack": "^1.0.2",
+    "binpackingjs": "^2.2.5",
     "classnames": "^2.2.6",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

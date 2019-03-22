@@ -2,7 +2,26 @@
   position: relative;
   right: -1rem;
 }
+.trials {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trial-1,
+.trial-2 {
+  position: relative;
+}
+.trial-2 {
+  top: 20rem;
+}
 canvas {
   position: absolute;
+  cursor: pointer;
+  z-index: -100;
   border: 1px solid #ccc;
+  background-color: white;
+}
+canvas:hover {
+  background-color: red;
 }
